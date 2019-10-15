@@ -1,0 +1,149 @@
+13:47:36.538 COMMENT   Engine           Test Scenario execution started
+13:47:36.538 INFO      Engine           Using context settings:
+  Engine Version       : 19.4.1
+  Environment id                : 5b5f2a71787be73b59238d7b
+  Environment type              : Cics
+  Operating system              : ZOS
+  zOS agent version             : NEWEST
+  Server address                : CWCC.COMPUWARE.COM
+  Server port                   : 16196
+  Job execution timeout seconds : 600
+  Job info interval seconds     : 3
+  Socket read timeout           : 30
+  Encoding                      : ISO8859-1
+  Codepage                      : IBM-1047
+  Host user Id                  : SNCBAW0
+13:47:36.539 INFO      Engine           Setting variables from context and context data extensions
+13:47:36.539 INFO      Engine             id: environmentId      value: 5b5f2a71787be73b59238d7b
+13:47:36.539 INFO      Engine             id: environmentType    value: CICS
+13:47:36.539 INFO      Engine             id: userId             value: SNCBAW0
+13:47:36.539 INFO      Variable         Interpreting Variable id:data dataFile:LGICUS01_Excel_data.xls
+13:47:36.578 LOG       Variable         Resolved data items from file LGICUS01_Excel_data.xls
+<testcase>
+  <ca-customer-num_input>0000000001</ca-customer-num_input>
+  <ca-first-name_expected>Andrew</ca-first-name_expected>
+  <ca-last-name_expected>Pandy</ca-last-name_expected>
+</testcase>
+<testcase>
+  <ca-customer-num_input>0000000002</ca-customer-num_input>
+  <ca-first-name_expected>Scott</ca-first-name_expected>
+  <ca-last-name_expected>Tracey</ca-last-name_expected>
+</testcase>
+<testcase>
+  <ca-customer-num_input>0000000005</ca-customer-num_input>
+  <ca-first-name_expected>Graham</ca-first-name_expected>
+  <ca-last-name_expected>Cuthburt</ca-last-name_expected>
+</testcase>
+13:47:36.578 INFO      IterateData      Interpreting IterateData id: loop. Number of data iterations: 3. Variable loopIndex contains iteration number
+13:47:36.578 INFO      IterateData      Iteration number 0 started.
+13:47:36.578 LOG       IterateData      Iteration Data:
+<testcase xmlns="http://www.xact.dk/xatester/v/1">
+  <ca-customer-num_input>0000000001</ca-customer-num_input>
+  <ca-first-name_expected>Andrew</ca-first-name_expected>
+  <ca-last-name_expected>Pandy</ca-last-name_expected>
+</testcase>
+13:47:36.579 INFO      Component        Interpreting Component: LGICUS01 program:LGICUS01
+13:47:36.582 INFO      Component        Component will be executed in CICS and top level element definitions are:
+13:47:36.582 INFO      Component          Element: dfhcommarea Area type:DEFAULT
+13:47:36.583 LOG       CWCC CICS        Component Runtime Settings:
+13:47:36.583 LOG       CWCC CICS          Load library              :GENAPP.ISPW.PROD.LOAD
+13:47:36.583 LOG       CWCC CICS          Additional load libraries :
+13:47:36.583 LOG       CWCC CICS          Listing libraries         :
+13:47:36.583 LOG       CWCC CICS          SysDebug libraries        :
+13:47:36.583 LOG       CWCC CICS          DB2 Subsystem ID          :DBCC
+13:47:36.583 LOG       CWCC CICS          DB2 plan                  :GENAONE
+13:47:36.583 LOG       CWCC CICS          APPLID                    :HCCAC013
+13:47:36.583 LOG       CWCC CICS          Channel                   :
+13:47:36.583 LOG       CWCC CICS          Call interface            :CICSLINK
+13:47:36.583 LOG       CWCC CICS          Debugger type             :NONE
+13:47:36.583 LOG       CWCC CICS          Component type            :COBOL
+13:47:36.583 INFO      CWCC CICS        Sending Module execution request to Host for module:LGICUS01 rollback:false
+13:47:36.855 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/691ebdde4ebb44a19c53c051d8349e57
+13:47:36.995 LOG       CWCC CICS        Uploading input data for module LGICUS01
+13:47:37.362 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>CICS</runtime><callinterface>CICSLINK</callinterface><applid>HCCAC013</applid><db2plan>GENAONE</db2plan><db2id>DBCC</db2id><rollback>false</rollback><jobdirectory>691ebdde4ebb44a19c53c051d8349e57</jobdirectory><amode24>false</amode24><members><membername>LGICUS01</membername></members><loads><mainload>GENAPP.ISPW.PROD.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:47:37.551 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0755808</jobid><jobname>SNCBAW0C</jobname><starttime>20190620134610967</starttime></xatz_response></XATZRESP>
+13:47:37.553 LOG       HCIClient        Response received from Host. Message: JobId:J0755808
+13:47:37.553 INFO      HCIClient        Job has been started at host with JobId:J0755808
+13:47:37.554 INFO      CWCC CICS        Waiting for Execution Result from Host
+13:47:40.704 INFO      CWCC CICS        Component completed with program exit: +0
+13:47:40.813 LOG       CWCC CICS        Setting execution variable 'jobid' to J0755808
+13:47:40.813 LOG       CWCC CICS        Setting execution variable 'programexit' to 0
+13:47:40.888 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:47:40.900 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:47:40.900 INFO      Component        Finished interpreting Component: LGICUS01 program:LGICUS01
+13:47:40.900 INFO      IterateData      Iteration number 1 started.
+13:47:40.900 LOG       IterateData      Iteration Data:
+<testcase xmlns="http://www.xact.dk/xatester/v/1">
+  <ca-customer-num_input>0000000002</ca-customer-num_input>
+  <ca-first-name_expected>Scott</ca-first-name_expected>
+  <ca-last-name_expected>Tracey</ca-last-name_expected>
+</testcase>
+13:47:40.900 INFO      Component        Interpreting Component: LGICUS01 program:LGICUS01
+13:47:40.901 INFO      Component        Component will be executed in CICS and top level element definitions are:
+13:47:40.901 INFO      Component          Element: dfhcommarea Area type:DEFAULT
+13:47:40.903 LOG       CWCC CICS        Component Runtime Settings:
+13:47:40.903 LOG       CWCC CICS          Load library              :GENAPP.ISPW.PROD.LOAD
+13:47:40.903 LOG       CWCC CICS          Additional load libraries :
+13:47:40.903 LOG       CWCC CICS          Listing libraries         :
+13:47:40.903 LOG       CWCC CICS          SysDebug libraries        :
+13:47:40.903 LOG       CWCC CICS          DB2 Subsystem ID          :DBCC
+13:47:40.903 LOG       CWCC CICS          DB2 plan                  :GENAONE
+13:47:40.903 LOG       CWCC CICS          APPLID                    :HCCAC013
+13:47:40.903 LOG       CWCC CICS          Channel                   :
+13:47:40.903 LOG       CWCC CICS          Call interface            :CICSLINK
+13:47:40.903 LOG       CWCC CICS          Debugger type             :NONE
+13:47:40.903 LOG       CWCC CICS          Component type            :COBOL
+13:47:40.903 INFO      CWCC CICS        Sending Module execution request to Host for module:LGICUS01 rollback:false
+13:47:41.149 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/82b9504e5b0445a3882c10bf1bb355c0
+13:47:41.286 LOG       CWCC CICS        Uploading input data for module LGICUS01
+13:47:41.643 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>CICS</runtime><callinterface>CICSLINK</callinterface><applid>HCCAC013</applid><db2plan>GENAONE</db2plan><db2id>DBCC</db2id><rollback>false</rollback><jobdirectory>82b9504e5b0445a3882c10bf1bb355c0</jobdirectory><amode24>false</amode24><members><membername>LGICUS01</membername></members><loads><mainload>GENAPP.ISPW.PROD.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:47:41.822 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0755809</jobid><jobname>SNCBAW0C</jobname><starttime>20190620134615240</starttime></xatz_response></XATZRESP>
+13:47:41.825 LOG       HCIClient        Response received from Host. Message: JobId:J0755809
+13:47:41.825 INFO      HCIClient        Job has been started at host with JobId:J0755809
+13:47:41.826 INFO      CWCC CICS        Waiting for Execution Result from Host
+13:47:44.978 INFO      CWCC CICS        Component completed with program exit: +0
+13:47:45.078 LOG       CWCC CICS        Setting execution variable 'jobid' to J0755809
+13:47:45.078 LOG       CWCC CICS        Setting execution variable 'programexit' to 0
+13:47:45.160 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:47:45.173 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:47:45.173 INFO      Component        Finished interpreting Component: LGICUS01 program:LGICUS01
+13:47:45.173 INFO      IterateData      Iteration number 2 started.
+13:47:45.174 LOG       IterateData      Iteration Data:
+<testcase xmlns="http://www.xact.dk/xatester/v/1">
+  <ca-customer-num_input>0000000005</ca-customer-num_input>
+  <ca-first-name_expected>Graham</ca-first-name_expected>
+  <ca-last-name_expected>Cuthburt</ca-last-name_expected>
+</testcase>
+13:47:45.174 INFO      Component        Interpreting Component: LGICUS01 program:LGICUS01
+13:47:45.174 INFO      Component        Component will be executed in CICS and top level element definitions are:
+13:47:45.174 INFO      Component          Element: dfhcommarea Area type:DEFAULT
+13:47:45.175 LOG       CWCC CICS        Component Runtime Settings:
+13:47:45.175 LOG       CWCC CICS          Load library              :GENAPP.ISPW.PROD.LOAD
+13:47:45.175 LOG       CWCC CICS          Additional load libraries :
+13:47:45.175 LOG       CWCC CICS          Listing libraries         :
+13:47:45.175 LOG       CWCC CICS          SysDebug libraries        :
+13:47:45.175 LOG       CWCC CICS          DB2 Subsystem ID          :DBCC
+13:47:45.175 LOG       CWCC CICS          DB2 plan                  :GENAONE
+13:47:45.175 LOG       CWCC CICS          APPLID                    :HCCAC013
+13:47:45.175 LOG       CWCC CICS          Channel                   :
+13:47:45.175 LOG       CWCC CICS          Call interface            :CICSLINK
+13:47:45.175 LOG       CWCC CICS          Debugger type             :NONE
+13:47:45.175 LOG       CWCC CICS          Component type            :COBOL
+13:47:45.175 INFO      CWCC CICS        Sending Module execution request to Host for module:LGICUS01 rollback:false
+13:47:45.405 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/7216970f35cb4720a6871e1fc626314b
+13:47:45.545 LOG       CWCC CICS        Uploading input data for module LGICUS01
+13:47:45.902 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>CICS</runtime><callinterface>CICSLINK</callinterface><applid>HCCAC013</applid><db2plan>GENAONE</db2plan><db2id>DBCC</db2id><rollback>false</rollback><jobdirectory>7216970f35cb4720a6871e1fc626314b</jobdirectory><amode24>false</amode24><members><membername>LGICUS01</membername></members><loads><mainload>GENAPP.ISPW.PROD.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+13:47:46.079 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0755810</jobid><jobname>SNCBAW0C</jobname><starttime>20190620134619498</starttime></xatz_response></XATZRESP>
+13:47:46.081 LOG       HCIClient        Response received from Host. Message: JobId:J0755810
+13:47:46.081 INFO      HCIClient        Job has been started at host with JobId:J0755810
+13:47:46.081 INFO      CWCC CICS        Waiting for Execution Result from Host
+13:47:49.241 INFO      CWCC CICS        Component completed with program exit: +0
+13:47:49.321 LOG       CWCC CICS        Setting execution variable 'jobid' to J0755810
+13:47:49.321 LOG       CWCC CICS        Setting execution variable 'programexit' to 0
+13:47:49.400 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:47:49.432 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:47:49.433 INFO      Component        Finished interpreting Component: LGICUS01 program:LGICUS01
+13:47:49.433 VERIFY    ExpectedData     VerificationResult : DataItem: /dfhcommarea/ca-customer-request/ca-last-name. Actual value is different from expected. Actual value: Cuthbert Expected value: Cuthburt. Actual value:Cuthbert. Expected value:Cuthburt
+13:47:49.434 VERIFY    Engine           Component name:LGICUS01 contains data that where not verified correctly
+13:47:49.434 INFO      IterateData      IterateData completed
+13:47:49.434 COMMENT   Engine           Test Scenario execution ended
