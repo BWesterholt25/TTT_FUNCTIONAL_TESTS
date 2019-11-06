@@ -1,6 +1,6 @@
-11:07:11.324 COMMENT   Engine           Test Scenario execution started
-11:07:11.326 INFO      Engine           Using context settings:
-  Engine Version       : 19.5.1
+13:46:52.313 COMMENT   Engine           Test Scenario execution started
+13:46:52.313 INFO      Engine           Using context settings:
+  Engine Version       : 19.6.1
   Environment id                : 5b508b8a787be73b59238d38
   Environment type              : Batch
   Operating system              : ZOS
@@ -12,68 +12,68 @@
   Socket read timeout           : 30
   Encoding                      : ISO8859-1
   Codepage                      : IBM-1047
-  Host user Id                  : sncbaw0
-11:07:11.326 INFO      Engine           Setting variables from context and context data extensions
-11:07:11.326 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
-11:07:11.327 INFO      Engine             id: environmentType    value: BATCH
-11:07:11.327 INFO      Engine             id: userId             value: sncbaw0
-11:07:11.328 INFO      SQLSelect        Interpreting SQLSelect id:BEFORE statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
-11:07:11.328 INFO      SQLSelect        Using database from Environment:DBCCCWCC
-11:07:11.328 LOG       SQLSelect        Establishing connection to database DBCCCWCC
-11:07:12.312 LOG       SQLSelect        Preparing the SQL statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
-11:07:12.313 LOG       SQLSelect        Setting max rows to: 20
-11:07:12.314 LOG       SQLSelect        Setting up the SQL statement with parameters
-11:07:12.314 LOG       SQLSelect        Executing the SQL statement
-11:07:12.398 LOG       SQLSelect        Handling the SQL result
-11:07:12.401 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:7
-11:07:12.427 INFO      Component        Interpreting Component: XAKTDB2X program:XAKTDB2X
-11:07:12.452 LOG       CWCC Batch       Final JCL setup for the component:
+  Host user Id                  : SNCBAW0
+13:46:52.313 INFO      Engine           Setting variables from context and context data extensions
+13:46:52.313 INFO      Engine             id: environmentId      value: 5b508b8a787be73b59238d38
+13:46:52.313 INFO      Engine             id: environmentType    value: BATCH
+13:46:52.313 INFO      Engine             id: userId             value: SNCBAW0
+13:46:52.314 INFO      SQLSelect        Interpreting SQLSelect id:BEFORE statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:52.314 INFO      SQLSelect        Using database from Environment:DBCCCWCC
+13:46:52.314 LOG       SQLSelect        Establishing connection to database DBCCCWCC
+13:46:53.161 LOG       SQLSelect        Preparing the SQL statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:53.165 LOG       SQLSelect        Setting max rows to: 20
+13:46:53.165 LOG       SQLSelect        Setting up the SQL statement with parameters
+13:46:53.165 LOG       SQLSelect        Executing the SQL statement
+13:46:53.409 LOG       SQLSelect        Handling the SQL result
+13:46:53.437 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:7
+13:46:53.438 INFO      Component        Interpreting Component: XAKTDB2X program:XAKTDB2X
+13:46:53.439 LOG       CWCC Batch       Final JCL setup for the component:
 //EMPFILE  DD DISP=SHR,DSN=SNCBAW0.TSO.JCLLIB(TTTDATD)
 //RPTFILE  DD SYSOUT=*
 //SYSOUT   DD SYSOUT=*
 //SYSTSPRT DD SYSOUT=*
 
-11:07:12.453 LOG       CWCC Batch       Component Runtime Settings:
-11:07:12.453 LOG       CWCC Batch         Load library              :SNCBAW0.ESS.LOAD
-11:07:12.453 LOG       CWCC Batch         Additional load libraries :
-11:07:12.453 LOG       CWCC Batch         Listing libraries         :
-11:07:12.453 LOG       CWCC Batch         SysDebug libraries        :
-11:07:12.454 LOG       CWCC Batch         DB2 Subsystem ID          :DBCC
-11:07:12.454 LOG       CWCC Batch         DB2 plan                  :XAKTDB2X
-11:07:12.454 LOG       CWCC Batch         Call interface            :NONE
-11:07:12.454 LOG       CWCC Batch         Debugger type             :NONE
-11:07:12.454 LOG       CWCC Batch         Component type            :COBOL
-11:07:12.465 INFO      CWCC Batch       Sending Module execution request to Host for module:XAKTDB2X rollback:true
-11:07:12.627 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/5c35f50c890e45d487524b7608a6e798
-11:07:12.768 LOG       CWCC Batch       Uploading input data for module XAKTDB2X
-11:07:13.471 INFO      CWCC Batch       Component has post SQLSelect statement that is: SELECT EMP_NUM, WAGES, OVERTIME, COMM  FROM SNCBAW0.KT_DEMOTAB
-11:07:13.472 LOG       CWCC Batch       Uploading SQLSelect data into file XAT_Module.i.xmlsql
-11:07:14.106 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan>XAKTDB2X</db2plan><db2id>DBCC</db2id><rollback>true</rollback><jobdirectory>5c35f50c890e45d487524b7608a6e798</jobdirectory><amode24>false</amode24><members><membername>XAKTDB2X</membername></members><loads><mainload>SNCBAW0.ESS.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang><refs><ref>//EMPFILE  DD DISP=SHR,DSN=SNCBAW0.TSO.JCLLIB(TTTDATD)</ref><ref>//RPTFILE  DD SYSOUT=*</ref><ref>//SYSOUT   DD SYSOUT=*</ref><ref>//SYSTSPRT DD SYSOUT=*</ref></refs><sql>true</sql></xatz_request></XATZREQ>
-11:07:14.310 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0777337</jobid><jobname>SNCBAW0E</jobname><starttime>20190827110526577</starttime></xatz_response></XATZRESP>
-11:07:14.311 LOG       HCIClient        Response received from Host. Message: JobId:J0777337
-11:07:14.311 INFO      HCIClient        Job has been started at host with JobId:J0777337
-11:07:14.312 INFO      CWCC Batch       Waiting for Execution Result from Host
-11:07:17.452 INFO      CWCC Batch       Component completed with program exit: +0
-11:07:17.525 LOG       CWCC Batch       Setting execution variable 'jobid' to J0777337
-11:07:17.525 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
-11:07:17.546 LOG       CWCC Batch       Post SQLSelect has been executed, now getting result from file XAT_Module.o.xmlsql
-11:07:17.626 LOG       CWCC Batch       Setting SQLSelect result at id:xaktdb2xSql
-11:07:17.700 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
-11:07:18.195 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
-11:07:18.195 INFO      Component        Finished interpreting Component: XAKTDB2X program:XAKTDB2X
-11:07:18.197 INFO      SQLSelect        Interpreting SQLSelect id:AFTER statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
-11:07:18.197 INFO      SQLSelect        Using database from Environment:DBCCCWCC
-11:07:18.197 LOG       SQLSelect        Establishing connection to database DBCCCWCC
-11:07:18.508 LOG       SQLSelect        Preparing the SQL statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
-11:07:18.508 LOG       SQLSelect        Setting max rows to: 20
-11:07:18.508 LOG       SQLSelect        Setting up the SQL statement with parameters
-11:07:18.508 LOG       SQLSelect        Executing the SQL statement
-11:07:18.574 LOG       SQLSelect        Handling the SQL result
-11:07:18.578 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:7
-11:07:18.579 INFO      Verify           Interpreting Verify component name:Verify
-11:07:18.669 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+13:46:53.439 LOG       CWCC Batch       Component Runtime Settings:
+13:46:53.439 LOG       CWCC Batch         Load libraries :
+13:46:53.439 LOG       CWCC Batch         Optional main Load library:SNCBAW0.ESS.LOAD
+13:46:53.439 LOG       CWCC Batch         Listing libraries         :
+13:46:53.439 LOG       CWCC Batch         SysDebug libraries        :
+13:46:53.439 LOG       CWCC Batch         DB2 Subsystem ID          :DBCC
+13:46:53.439 LOG       CWCC Batch         DB2 plan                  :XAKTDB2X
+13:46:53.439 LOG       CWCC Batch         Call interface            :NONE
+13:46:53.439 LOG       CWCC Batch         Debugger type             :NONE
+13:46:53.439 LOG       CWCC Batch         Component type            :COBOL
+13:46:53.439 INFO      CWCC Batch       Sending Module execution request to Host for module:XAKTDB2X rollback:true
+13:46:53.805 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/12032d78821a48caaf9f1f017f7f3be5
+13:46:53.893 LOG       CWCC Batch       Uploading input data for module XAKTDB2X
+13:46:54.542 INFO      CWCC Batch       Component has post SQLSelect statement that is: SELECT EMP_NUM, WAGES, OVERTIME, COMM  FROM SNCBAW0.KT_DEMOTAB
+13:46:54.542 LOG       CWCC Batch       Uploading SQLSelect data into file XAT_Module.i.xmlsql
+13:46:55.025 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>log</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>BATCH</runtime><callinterface /><applid /><db2plan>XAKTDB2X</db2plan><db2id>DBCC</db2id><rollback>true</rollback><jobdirectory>12032d78821a48caaf9f1f017f7f3be5</jobdirectory><amode24>false</amode24><members><membername>XAKTDB2X</membername></members><loads><mainload>SNCBAW0.ESS.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang><refs><ref>//EMPFILE  DD DISP=SHR,DSN=SNCBAW0.TSO.JCLLIB(TTTDATD)</ref><ref>//RPTFILE  DD SYSOUT=*</ref><ref>//SYSOUT   DD SYSOUT=*</ref><ref>//SYSTSPRT DD SYSOUT=*</ref></refs><sql>true</sql></xatz_request></XATZREQ>
+13:46:55.202 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0795414</jobid><jobname>SNCBAW0E</jobname><starttime>20191015134454124</starttime></xatz_response></XATZRESP>
+13:46:55.203 LOG       HCIClient        Response received from Host. Message: JobId:J0795414
+13:46:55.203 INFO      HCIClient        Job has been started at host with JobId:J0795414
+13:46:55.203 INFO      CWCC Batch       Waiting for Execution Result from Host
+13:46:58.301 INFO      CWCC Batch       Component completed with program exit: +0
+13:46:58.352 LOG       CWCC Batch       Setting execution variable 'jobid' to J0795414
+13:46:58.352 LOG       CWCC Batch       Setting execution variable 'programexit' to 0
+13:46:58.352 LOG       CWCC Batch       Post SQLSelect has been executed, now getting result from file XAT_Module.o.xmlsql
+13:46:58.429 LOG       CWCC Batch       Setting SQLSelect result at id:xaktdb2xSql
+13:46:58.478 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+13:46:58.494 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+13:46:58.494 INFO      Component        Finished interpreting Component: XAKTDB2X program:XAKTDB2X
+13:46:58.494 INFO      SQLSelect        Interpreting SQLSelect id:AFTER statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:58.494 INFO      SQLSelect        Using database from Environment:DBCCCWCC
+13:46:58.494 LOG       SQLSelect        Establishing connection to database DBCCCWCC
+13:46:58.774 LOG       SQLSelect        Preparing the SQL statement: SELECT * FROM SNCBAW0.KT_DEMOTAB
+13:46:58.774 LOG       SQLSelect        Setting max rows to: 20
+13:46:58.774 LOG       SQLSelect        Setting up the SQL statement with parameters
+13:46:58.774 LOG       SQLSelect        Executing the SQL statement
+13:46:58.817 LOG       SQLSelect        Handling the SQL result
+13:46:58.818 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:7
+13:46:58.818 INFO      Verify           Interpreting Verify component name:Verify
+13:46:58.885 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
 BEFORE
-11:07:18.685 LOG       Verify           Expression evaluated to data structure:
+13:46:58.919 LOG       Verify           Expression evaluated to data structure:
 <Row>
   <EMP_NUM>03431</EMP_NUM>
   <WAGE_TYPE>H</WAGE_TYPE>
@@ -186,7 +186,7 @@ BEFORE
   <OVERTIME>0.00</OVERTIME>
   <COMM>0.00</COMM>
 </Row>
-11:07:18.687 LOG       Verify           Expected from expression:
+13:46:58.919 LOG       Verify           Expected from expression:
 <Row>
   <EMP_NUM>03431</EMP_NUM>
   <WAGE_TYPE>H</WAGE_TYPE>
@@ -299,9 +299,9 @@ BEFORE
   <OVERTIME>0.00</OVERTIME>
   <COMM>0.00</COMM>
 </Row>
-11:07:18.742 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+13:46:58.980 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
 AFTER
-11:07:18.750 LOG       Verify           Expression evaluated to data structure:
+13:46:58.987 LOG       Verify           Expression evaluated to data structure:
 <Row>
   <EMP_NUM>03431</EMP_NUM>
   <WAGE_TYPE>H</WAGE_TYPE>
@@ -414,7 +414,7 @@ AFTER
   <OVERTIME>0.00</OVERTIME>
   <COMM>0.00</COMM>
 </Row>
-11:07:18.751 LOG       Verify           Actual from expression:
+13:46:58.987 LOG       Verify           Actual from expression:
 <Row>
   <EMP_NUM>03431</EMP_NUM>
   <WAGE_TYPE>H</WAGE_TYPE>
@@ -527,11 +527,11 @@ AFTER
   <OVERTIME>0.00</OVERTIME>
   <COMM>0.00</COMM>
 </Row>
-11:07:18.755 INFO      Verify           Expected and Actual data was found to be identical
-11:07:18.756 INFO      Verify           Interpreting Verify component name:Verify Update
-11:07:18.756 INFO      Verify           Using verify expression:xaktdb2xSql.Row[0].WAGES>0
-11:07:19.216 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
+13:46:58.991 INFO      Verify           Expected and Actual data was found to be identical
+13:46:58.991 INFO      Verify           Interpreting Verify component name:Verify Update
+13:46:58.991 INFO      Verify           Using verify expression:xaktdb2xSql.Row[0].WAGES>0
+13:46:59.037 LOG       Verify           Evaluating expression:function println(text){print(text+'\n')};
 xaktdb2xSql.Row[0].WAGES>0
-11:07:19.255 LOG       Verify           Expression returned:
+13:46:59.087 LOG       Verify           Expression returned:
 true
-11:07:19.255 COMMENT   Engine           Test Scenario execution ended
+13:46:59.087 COMMENT   Engine           Test Scenario execution ended

@@ -8,8 +8,8 @@
           <ca-return-code />
           <ca-customer-num>0000000001</ca-customer-num>
           <ca-customer-request>
-            <ca-first-name />
-            <ca-last-name />
+            <ca-first-name expected="Andrew" />
+            <ca-last-name expected="Pandy" />
             <ca-dob />
             <ca-house-name />
             <ca-house-num />
