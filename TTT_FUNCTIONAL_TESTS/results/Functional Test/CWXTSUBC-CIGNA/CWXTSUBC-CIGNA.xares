@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<XaUnitResult resultType="FAILURE" containsSimulation="false">
-  <ExecutionId>785a6e5b-bb27-4e08-b6d4-2bcbe24240bd</ExecutionId>
-  <Message>An error occurred and the execution has been stopped. Unable to execute verify expression for dataitem element name:comm-total value:18000 in line:-1. Expression: =sales-amount*.04</Message>
+<XaUnitResult resultType="SUCCESS" containsSimulation="false">
+  <ExecutionId>c45e8e8b-c8bb-4d72-a5e4-7f07d9e38a43</ExecutionId>
+  <Message />
   <AST>
     <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1">
       <Test>
@@ -9,7 +9,7 @@
           <Data>
             <emp-type>M</emp-type>
             <sales-amount>450000</sales-amount>
-            <comm-total verifyExpression="=sales-amount*.04">18000</comm-total>
+            <comm-total expected="18000">18000</comm-total>
           </Data>
         </Component>
       </Test>
@@ -46,27 +46,13 @@
         </Parameter>
       </ExtensionData>
       <References componentName="cwxtsubc" />
-      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="cwxtsubc" path="CWXTSUBC-FT.xaunit">
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="cwxtsubc" path="CWXTSUBC-CIGNA.xaunit">
         <Test>
           <Component id="cwxtsubc" label="CWXTSUBC" moduleName="CWXTSUBC" programExitVerify="value &lt; 8" rollback="false">
             <Data>
               <emp-type>M</emp-type>
               <sales-amount>450000</sales-amount>
-              <comm-total verifyExpression="=sales-amount*.04" />
-            </Data>
-          </Component>
-          <Component label="CWXTSUBC" moduleName="CWXTSUBC" programExitVerify="value &lt; 8" rollback="false">
-            <Data>
-              <emp-type>S</emp-type>
-              <sales-amount>100000</sales-amount>
-              <comm-total expected="10000" />
-            </Data>
-          </Component>
-          <Component label="CWXTSUBC" moduleName="CWXTSUBC" programExitVerify="value &lt; 8" rollback="false">
-            <Data>
-              <emp-type>M</emp-type>
-              <sales-amount>450000</sales-amount>
-              <comm-total expected="17999" />
+              <comm-total expected="18000" />
             </Data>
           </Component>
         </Test>
@@ -83,6 +69,6 @@
       <ExternalResources />
     </ExecutionContext>
   </Context>
-  <Started>20191203-17-27-26</Started>
-  <Ended>20191203-17-27-33</Ended>
+  <Started>20191120-14-21-30</Started>
+  <Ended>20191120-14-21-35</Ended>
 </XaUnitResult>

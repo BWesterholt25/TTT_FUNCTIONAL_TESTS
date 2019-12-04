@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XaUnitResult resultType="SUCCESS" containsSimulation="false">
-  <ExecutionId>2c0ecedb-669d-4504-8831-5d6e977ebf5e</ExecutionId>
+  <ExecutionId>973c1389-bde9-42c8-ad03-56fc901ee242</ExecutionId>
   <Message />
   <AST>
     <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1">
@@ -624,6 +624,6 @@
       <ExternalResources />
     </ExecutionContext>
   </Context>
-  <Started>20191015-13-46-52</Started>
-  <Ended>20191015-13-46-59</Ended>
+  <Started>20191204-14-00-51</Started>
+  <Ended>20191204-14-01-00</Ended>
 </XaUnitResult>

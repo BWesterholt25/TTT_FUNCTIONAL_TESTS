@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XaUnitResult resultType="SUCCESS" containsSimulation="false">
-  <ExecutionId>ea3f956f-95ee-47e9-a330-1c4802fa7b36</ExecutionId>
+  <ExecutionId>df153150-2367-4a91-ad80-7adada1258c4</ExecutionId>
   <Message />
   <AST>
     <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1">
       <Test>
-        <SQLSelect id="SQL_SELECT" maxRows="5">
+        <SQLSelect id="SQL_SELECT" maxRows="2">
           <Statement>SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER</Statement>
           <Output name="CUSTOMERNUMBER" />
           <Output name="FIRSTNAME" />
@@ -20,24 +20,9 @@
             <FIRSTNAME>Scott</FIRSTNAME>
             <LASTNAME>Tracey</LASTNAME>
           </Row>
-          <Row>
-            <CUSTOMERNUMBER>1000163</CUSTOMERNUMBER>
-            <FIRSTNAME>ERIC</FIRSTNAME>
-            <LASTNAME>NOTEST</LASTNAME>
-          </Row>
-          <Row>
-            <CUSTOMERNUMBER>4</CUSTOMERNUMBER>
-            <FIRSTNAME>Tim</FIRSTNAME>
-            <LASTNAME>Ceradsky</LASTNAME>
-          </Row>
-          <Row>
-            <CUSTOMERNUMBER>5</CUSTOMERNUMBER>
-            <FIRSTNAME>Graham</FIRSTNAME>
-            <LASTNAME>Cuthbert</LASTNAME>
-          </Row>
         </SQLSelect>
-        <IterateData id="loop" referencedId="SQL_SELECT" dataPath="/Row[0]">
-          <Component id="lgicus01" label="LGICUS01" moduleName="LGICUS01" programExitVerify="value &lt; 8" programExit="0" rollback="false">
+        <IterateData id="loop" referencedId="SQL_SELECT" dataPath="">
+          <Component label="LGICUS01" moduleName="LGICUS01" programExitVerify="value &lt; 8" programExit="0" rollback="false">
             <Data>
               <dfhcommarea>
                 <ca-request-id />
@@ -69,6 +54,38 @@
               </dfhcommarea>
             </Data>
           </Component>
+          <Component label="LGICUS01" moduleName="LGICUS01" programExitVerify="value &lt; 8" programExit="0" rollback="false">
+            <Data>
+              <dfhcommarea>
+                <ca-request-id />
+                <ca-return-code>0</ca-return-code>
+                <ca-customer-num>2</ca-customer-num>
+                <ca-customer-request>
+                  <ca-first-name expected="Scott">Scott</ca-first-name>
+                  <ca-last-name expected="Tracey">Tracey</ca-last-name>
+                  <ca-dob>1965-09-30</ca-dob>
+                  <ca-house-name>Tracey Island</ca-house-name>
+                  <ca-house-num>6</ca-house-num>
+                  <ca-postcode>TRACEY Z</ca-postcode>
+                  <ca-num-policies>0</ca-num-policies>
+                  <ca-phone-mobile>Mobile</ca-phone-mobile>
+                  <ca-phone-home>Home</ca-phone-home>
+                  <ca-email-address>XEFROOM@TBHOLDINGS.COM</ca-email-address>
+                  <ca-national-id-nbr>IDNUMBER</ca-national-id-nbr>
+                  <ca-nin-type>DL</ca-nin-type>
+                  <ca-street-address>123</ca-street-address>
+                  <ca-city>Detroit</ca-city>
+                  <ca-state>MI</ca-state>
+                  <ca-country-code>USA</ca-country-code>
+                  <ca-sales-territory>EMEA</ca-sales-territory>
+                  <ca-customer-pfkey />
+                  <ca-customer-begin>0</ca-customer-begin>
+                  <ca-customer-end>0</ca-customer-end>
+                  <ca-policy-data />
+                </ca-customer-request>
+              </dfhcommarea>
+            </Data>
+          </Component>
         </IterateData>
       </Test>
       <MetaData>
@@ -80,7 +97,7 @@
               <ca-customer-num type="NumericDisplay" length="10" bytes="10" inOutType="INPUT" signed="false" decimals="0" />
               <ca-customer-request inOutType="OUTPUT" redefines="ca-request-specific">
                 <ca-first-name type="Character" length="10" bytes="10" inOutType="OUTPUT" />
-                <ca-last-name type="Character" length="20" bytes="20" />
+                <ca-last-name type="Character" length="20" bytes="20" inOutType="OUTPUT" />
                 <ca-dob type="Character" length="10" bytes="10" />
                 <ca-house-name type="Character" length="20" bytes="20" />
                 <ca-house-num type="Character" length="4" bytes="4" />
@@ -108,7 +125,7 @@
     </XaUnit>
   </AST>
   <Context>
-    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5b5f2a71787be73b59238d7b" logLevel="VERBOSE" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="sncbaw0">
+    <ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5b5f2a71787be73b59238d7b" logLevel="LOG" remote="false" useSimulations="true" uploadResult="false" timeout="600" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" userid="sncbaw0">
       <platformruntime database="DBCCCWCC" driver="com.ibm.db2.jcc.DB2Driver" uri="jdbc:db2://cwcc.compuware.com:546/${database}" environmenttype="CICS" applid="HCCAC013" callinterface="CICSCALL" />
       <ExtensionData />
       <ExtensionData componentName="lgicus01" componentId="5b87fbba787be73b59238f17">
@@ -142,16 +159,16 @@
         </Parameter>
       </ExtensionData>
       <References componentName="lgicus01" />
-      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="lgicus01" path="LGICUS01_DB2.xaunit">
+      <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="lgicus01" path="LGICUS01_CVS.xaunit">
         <Test>
-          <SQLSelect id="SQL_SELECT" maxRows="5">
+          <SQLSelect id="SQL_SELECT" description="SELECT DB2 DATA TO BE USED AS INPUT TO LGICUS01" maxRows="2">
             <Statement>SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER</Statement>
             <Output name="CUSTOMERNUMBER" />
             <Output name="FIRSTNAME" />
             <Output name="LASTNAME" />
           </SQLSelect>
-          <IterateData id="loop" referencedId="SQL_SELECT" dataPath="/Row[0]">
-            <Component id="lgicus01" label="LGICUS01" moduleName="LGICUS01" programExitVerify="value &lt; 8" rollback="false">
+          <IterateData id="loop" referencedId="SQL_SELECT" dataPath="">
+            <Component label="LGICUS01" moduleName="LGICUS01" programExitVerify="value &lt; 8" rollback="false">
               <Data>
                 <dfhcommarea>
                   <ca-request-id />
@@ -194,7 +211,7 @@
                 <ca-customer-num type="NumericDisplay" length="10" bytes="10" inOutType="INPUT" signed="false" decimals="0" />
                 <ca-customer-request inOutType="OUTPUT" redefines="ca-request-specific">
                   <ca-first-name type="Character" length="10" bytes="10" inOutType="OUTPUT" />
-                  <ca-last-name type="Character" length="20" bytes="20" />
+                  <ca-last-name type="Character" length="20" bytes="20" inOutType="OUTPUT" />
                   <ca-dob type="Character" length="10" bytes="10" />
                   <ca-house-name type="Character" length="20" bytes="20" />
                   <ca-house-num type="Character" length="4" bytes="4" />
@@ -223,6 +240,6 @@
       <ExternalResources />
     </ExecutionContext>
   </Context>
-  <Started>20191203-15-49-00</Started>
-  <Ended>20191203-15-49-10</Ended>
+  <Started>20191203-12-53-07</Started>
+  <Ended>20191203-12-53-25</Ended>
 </XaUnitResult>

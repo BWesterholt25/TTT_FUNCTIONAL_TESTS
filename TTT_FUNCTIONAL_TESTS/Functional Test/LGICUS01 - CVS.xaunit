@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <XaUnit xmlns="http://www.xact.dk/xatester/v/1" xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="lgicus01">
   <Test>
-    <Variable id="data" filePath="AMEX-EXCEL_data.xls" />
-    <IterateData id="loop" referencedId="data" dataPath="">
+    <SQLSelect id="SQL_SELECT" description="SELECT DB2 DATA TO BE USED AS INPUT" maxRows="5">
+      <Statement>SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER</Statement>
+      <Output name="CUSTOMERNUMBER" />
+      <Output name="FIRSTNAME" />
+      <Output name="LASTNAME" />
+    </SQLSelect>
+    <IterateData id="loop" referencedId="SQL_SELECT" dataPath="">
       <Component id="lgicus01" label="LGICUS01" moduleName="LGICUS01" programExitVerify="value &lt; 8" rollback="false">
         <Data>
           <dfhcommarea>
             <ca-request-id />
             <ca-return-code />
-            <ca-customer-num>=loop.testcase.ca-customer-num_input</ca-customer-num>
+            <ca-customer-num>=SQL_SELECT.Row[0].CUSTOMERNUMBER</ca-customer-num>
             <ca-customer-request>
-              <ca-first-name expected="=loop.testcase.ca-first-name_expected" />
-              <ca-last-name expected="=loop.testcase.ca-last-name_expected" />
-              <ca-dob expected="=loop.testcase.ca-dob_expected" />
+              <ca-first-name expected="=SQL_SELECT.Row[0].FIRSTNAME" />
+              <ca-last-name expected="=SQL_SELECT.Row[0].LASTNAME" />
+              <ca-dob />
               <ca-house-name />
               <ca-house-num />
               <ca-postcode />

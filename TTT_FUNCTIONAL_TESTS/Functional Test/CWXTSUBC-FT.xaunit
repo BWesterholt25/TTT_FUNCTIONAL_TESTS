@@ -5,7 +5,7 @@
       <Data>
         <emp-type>M</emp-type>
         <sales-amount>450000</sales-amount>
-        <comm-total expected="18000" />
+        <comm-total verifyExpression="=sales-amount*.04" />
       </Data>
     </Component>
     <Component label="CWXTSUBC" moduleName="CWXTSUBC" programExitVerify="value &lt; 8" rollback="false">
