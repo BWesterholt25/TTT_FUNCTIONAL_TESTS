@@ -1,5 +1,5 @@
-15:49:00.582 COMMENT   Engine           Test Scenario execution started
-15:49:00.582 INFO      Engine           Using context settings:
+19:40:17.801 COMMENT   Engine           Test Scenario execution started
+19:40:17.802 INFO      Engine           Using context settings:
   Engine Version       : 19.6.1
   Environment id                : 5b5f2a71787be73b59238d7b
   Environment type              : Cics
@@ -13,20 +13,20 @@
   Encoding                      : ISO8859-1
   Codepage                      : IBM-1047
   Host user Id                  : sncbaw0
-15:49:00.582 INFO      Engine           Setting variables from context and context data extensions
-15:49:00.582 INFO      Engine             id: environmentId      value: 5b5f2a71787be73b59238d7b
-15:49:00.582 INFO      Engine             id: environmentType    value: CICS
-15:49:00.582 INFO      Engine             id: userId             value: sncbaw0
-15:49:00.586 INFO      SQLSelect        Interpreting SQLSelect id:SQL_SELECT statement: SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER
-15:49:00.586 INFO      SQLSelect        Using database from Environment:DBCCCWCC
-15:49:00.586 LOG       SQLSelect        Establishing connection to database DBCCCWCC
-15:49:01.508 LOG       SQLSelect        Preparing the SQL statement: SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER
-15:49:01.568 LOG       SQLSelect        Setting max rows to: 5
-15:49:01.568 LOG       SQLSelect        Setting up the SQL statement with parameters
-15:49:01.568 LOG       SQLSelect        Executing the SQL statement
-15:49:01.825 LOG       SQLSelect        Handling the SQL result
-15:49:01.828 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:5
-15:49:01.828 VERBOSE   SQLSelect        Resulting rows:
+19:40:17.802 INFO      Engine           Setting variables from context and context data extensions
+19:40:17.803 INFO      Engine             id: environmentId      value: 5b5f2a71787be73b59238d7b
+19:40:17.803 INFO      Engine             id: environmentType    value: CICS
+19:40:17.803 INFO      Engine             id: userId             value: sncbaw0
+19:40:17.854 INFO      SQLSelect        Interpreting SQLSelect id:SQL_SELECT statement: SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER
+19:40:17.854 INFO      SQLSelect        Using database from Environment:DBCCCWCC
+19:40:17.854 LOG       SQLSelect        Establishing connection to database DBCCCWCC
+19:40:19.434 LOG       SQLSelect        Preparing the SQL statement: SELECT CUSTOMERNUMBER, FIRSTNAME, LASTNAME FROM GENAPPDB.CUSTOMER
+19:40:19.439 LOG       SQLSelect        Setting max rows to: 5
+19:40:19.439 LOG       SQLSelect        Setting up the SQL statement with parameters
+19:40:19.440 LOG       SQLSelect        Executing the SQL statement
+19:40:19.696 LOG       SQLSelect        Handling the SQL result
+19:40:19.697 INFO      SQLSelect        Finished SQLSelect. Number of rows selected:5
+19:40:19.699 VERBOSE   SQLSelect        Resulting rows:
 <Row>
   <CUSTOMERNUMBER>1</CUSTOMERNUMBER>
   <FIRSTNAME>Andrew</FIRSTNAME>
@@ -52,16 +52,16 @@
   <FIRSTNAME>Graham</FIRSTNAME>
   <LASTNAME>Cuthbert</LASTNAME>
 </Row>
-15:49:01.829 INFO      IterateData      Interpreting IterateData id: loop. Number of data iterations: 1. Variable loopIndex contains iteration number
-15:49:01.829 INFO      IterateData      Iteration number 0 started.
-15:49:01.829 LOG       IterateData      Iteration Data:
+19:40:19.701 INFO      IterateData      Interpreting IterateData id: loop. Number of data iterations: 1. Variable loopIndex contains iteration number
+19:40:19.701 INFO      IterateData      Iteration number 0 started.
+19:40:19.701 LOG       IterateData      Iteration Data:
 <Row xmlns="http://www.xact.dk/xatester/v/1">
   <CUSTOMERNUMBER>1</CUSTOMERNUMBER>
   <FIRSTNAME>Andrew</FIRSTNAME>
   <LASTNAME>Pandy</LASTNAME>
 </Row>
-15:49:01.829 INFO      Component        Interpreting Component: LGICUS01 program:LGICUS01
-15:49:01.832 VERBOSE   Component        Resolved input data :
+19:40:19.701 INFO      Component        Interpreting Component: LGICUS01 program:LGICUS01
+19:40:19.704 VERBOSE   Component        Resolved input data :
 <dfhcommarea>
   <ca-request-id></ca-request-id>
   <ca-return-code></ca-return-code>
@@ -90,142 +90,142 @@
     <ca-policy-data></ca-policy-data>
   </ca-customer-request>
 </dfhcommarea>
-15:49:01.832 INFO      Component        Component will be executed in CICS and top level element definitions are:
-15:49:01.832 INFO      Component          Element: dfhcommarea Area type:DEFAULT
-15:49:01.835 VERBOSE   CWCC CICS        Executing module: LGICUS01...
-15:49:01.835 VERBOSE   CWCC CICS        Validating Input data...
-15:49:01.835 VERBOSE   CWCC CICS        Successfully validated Input data
-15:49:01.885 VERBOSE   CWCC CICS        Files will be transfered in encoding: EBCDIC
-15:49:01.888 LOG       CWCC CICS        Component Runtime Settings:
-15:49:01.888 LOG       CWCC CICS          Load libraries :
-15:49:01.888 LOG       CWCC CICS          Optional main Load library:GENAPP.ISPW.PROD.LOAD
-15:49:01.888 LOG       CWCC CICS          Listing libraries         :
-15:49:01.888 LOG       CWCC CICS          SysDebug libraries        :
-15:49:01.888 LOG       CWCC CICS          DB2 Subsystem ID          :DBCC
-15:49:01.888 LOG       CWCC CICS          DB2 plan                  :GENAONE
-15:49:01.888 LOG       CWCC CICS          APPLID                    :HCCAC013
-15:49:01.888 LOG       CWCC CICS          Channel                   :
-15:49:01.888 LOG       CWCC CICS          Call interface            :CICSLINK
-15:49:01.889 LOG       CWCC CICS          Debugger type             :NONE
-15:49:01.889 LOG       CWCC CICS          Component type            :COBOL
-15:49:01.901 INFO      CWCC CICS        Sending Module execution request to Host for module:LGICUS01 rollback:false
-15:49:01.903 VERBOSE   HCIClient        Creating HciHostServices instance with Codepage :1047
-15:49:01.920 VERBOSE   HCIClient        Connecting outside workbench to HCI
-15:49:03.504 VERBOSE   HCIClient        Data is written in EBCDIC encoding to the host
-15:49:03.504 VERBOSE   HCIClient        Check if /u/xatester/sncbaw0 exixts
-15:49:03.736 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/acd93f454bee482bb329246a74712a82
-15:49:03.946 VERBOSE   HCIClient        Change permission job directory /u/xatester/sncbaw0/acd93f454bee482bb329246a74712a82
-15:49:04.154 LOG       CWCC CICS        Uploading input data for module LGICUS01
-15:49:05.096 VERBOSE   CWCC CICS        Changing file permission on file: XAT_Module.i.xml with permissions: 777
-15:49:05.230 VERBOSE   CWCC CICS        Input data for module LGICUS01 was uploaded in the file XAT_Module.i.xml
-15:49:05.231 VERBOSE   HCIClient        Sending request to HCI
-15:49:05.232 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>verbose</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>CICS</runtime><callinterface>CICSLINK</callinterface><applid>HCCAC013</applid><db2plan>GENAONE</db2plan><db2id>DBCC</db2id><rollback>false</rollback><jobdirectory>acd93f454bee482bb329246a74712a82</jobdirectory><amode24>false</amode24><members><membername>LGICUS01</membername></members><loads><mainload>GENAPP.ISPW.PROD.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
-15:49:05.522 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0811428</jobid><jobname>SNCBAW0C</jobname><starttime>20191203154651351</starttime></xatz_response></XATZRESP>
-15:49:05.528 LOG       HCIClient        Response received from Host. Message: JobId:J0811428
-15:49:05.528 INFO      HCIClient        Job has been started at host with JobId:J0811428
-15:49:05.529 INFO      CWCC CICS        Waiting for Execution Result from Host
-15:49:05.536 VERBOSE   CWCC CICS        Looking for notify file in 3000 ms...
-15:49:08.862 VERBOSE   CWCC CICS        Notify file available, now downloading...
-15:49:08.862 VERBOSE   CWCC CICS        Notify file content retrieved from Notify file. Content:<?xml version="1.0" encoding="UTF-8"?><XATZNOTF><xatz_notification><event>COMPLETED</event><programexit>+0</programexit><xarc>+0</xarc><message></message></xatz_notification></XATZNOTF>
-15:49:08.874 LOG       CWCC CICS        Retrieving job information host for job:J0811428
-15:49:08.887 VERBOSE   HCIClient        Creating HciHostServices instance with Default Codepage :1047
-15:49:08.887 VERBOSE   HCIClient        Connecting outside workbench to HCI
-15:49:08.890 VERBOSE   HCIClient        Data is written in EBCDIC encoding to the host
-15:49:08.890 VERBOSE   HCIClient        Sending request to HCI
-15:49:08.891 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>JOBINFO</operation><runat>DAY</runat><jobid>J0811428</jobid></xatz_request></XATZREQ>
-15:49:09.074 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0000</resultcode><resultmessage>Job information successfully returned</resultmessage><jobid /><responsedata><job><name>SNCBAW0C</name><status>OUTPUT</status><returncode>CC=0000    </returncode><steps><step><id>J0811428</id><name>JES2    </name><procstep>        </procstep><ddname>JESMSGLG</ddname><linect>   30</linect><lrecl>  133</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000002.JESMSGLG </dsname></step><step><id>J0811428</id><name>JES2    </name><procstep>        </procstep><ddname>JESJCL  </ddname><linect>  183</linect><lrecl>  136</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000003.JESJCL   </dsname></step><step><id>J0811428</id><name>JES2    </name><procstep>        </procstep><ddname>JESYSMSG</ddname><linect>  181</linect><lrecl>  137</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000004.JESYSMSG </dsname></step><step><id>J0811428</id><name>COPYLOAD</name><procstep>        </procstep><ddname>SYSPRINT</ddname><linect>   13</linect><lrecl>  121</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000110.?        </dsname></step><step><id>J0811428</id><name>EXCIEXEC</name><procstep>        </procstep><ddname>TTOUT   </ddname><linect>   34</linect><lrecl>  121</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000114.?        </dsname></step><step><id>J0811428</id><name>COPYLOG </name><procstep>        </procstep><ddname>STDOUT  </ddname><linect>   28</linect><lrecl>16383</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000115.?        </dsname></step><step><id>J0811428</id><name>COPYLOG </name><procstep>        </procstep><ddname>STDERR  </ddname><linect>    1</linect><lrecl>16383</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000116.?        </dsname></step><step><id>J0811428</id><name>CICSLOG </name><procstep>        </procstep><ddname>XASYSUT </ddname><linect>   49</linect><lrecl>  132</lrecl><dsname>SNCBAW0.SNCBAW0C.J0811428.D0000123.?        </dsname></step></steps></job></responsedata></xatz_response></XATZRESP>
-15:49:09.078 LOG       HCIClient        Response received from Host. Message:Job information successfully returned JobId:
-15:49:09.078 VERBOSE   JobAccessor      Jobinfo received from Host in responsedata
-15:49:09.091 VERBOSE   JobAccessor      JobInfo Content parsed. Number of steps:8
-15:49:09.091 LOG       CWCC CICS        Job information:
+19:40:19.705 INFO      Component        Component will be executed in CICS and top level element definitions are:
+19:40:19.705 INFO      Component          Element: dfhcommarea Area type:DEFAULT
+19:40:19.706 VERBOSE   CWCC CICS        Executing module: LGICUS01...
+19:40:19.706 VERBOSE   CWCC CICS        Validating Input data...
+19:40:19.706 VERBOSE   CWCC CICS        Successfully validated Input data
+19:40:19.729 VERBOSE   CWCC CICS        Files will be transfered in encoding: EBCDIC
+19:40:19.731 LOG       CWCC CICS        Component Runtime Settings:
+19:40:19.731 LOG       CWCC CICS          Load libraries :
+19:40:19.731 LOG       CWCC CICS          Optional main Load library:GENAPP.ISPW.PROD.LOAD
+19:40:19.731 LOG       CWCC CICS          Listing libraries         :
+19:40:19.731 LOG       CWCC CICS          SysDebug libraries        :
+19:40:19.731 LOG       CWCC CICS          DB2 Subsystem ID          :DBCC
+19:40:19.731 LOG       CWCC CICS          DB2 plan                  :GENAONE
+19:40:19.731 LOG       CWCC CICS          APPLID                    :HCCAC013
+19:40:19.731 LOG       CWCC CICS          Channel                   :
+19:40:19.731 LOG       CWCC CICS          Call interface            :CICSLINK
+19:40:19.731 LOG       CWCC CICS          Debugger type             :NONE
+19:40:19.731 LOG       CWCC CICS          Component type            :COBOL
+19:40:19.740 INFO      CWCC CICS        Sending Module execution request to Host for module:LGICUS01 rollback:false
+19:40:19.742 VERBOSE   HCIClient        Creating HciHostServices instance with Codepage :1047
+19:40:19.750 VERBOSE   HCIClient        Connecting outside workbench to HCI
+19:40:21.296 VERBOSE   HCIClient        Data is written in EBCDIC encoding to the host
+19:40:21.296 VERBOSE   HCIClient        Check if /u/xatester/sncbaw0 exixts
+19:40:21.467 INFO      HCIClient        Creating job directory /u/xatester/sncbaw0/2f320fdbe76d4aca8e5befdb1a2449ca
+19:40:21.637 VERBOSE   HCIClient        Change permission job directory /u/xatester/sncbaw0/2f320fdbe76d4aca8e5befdb1a2449ca
+19:40:21.805 LOG       CWCC CICS        Uploading input data for module LGICUS01
+19:40:22.540 VERBOSE   CWCC CICS        Changing file permission on file: XAT_Module.i.xml with permissions: 777
+19:40:22.711 VERBOSE   CWCC CICS        Input data for module LGICUS01 was uploaded in the file XAT_Module.i.xml
+19:40:22.712 VERBOSE   HCIClient        Sending request to HCI
+19:40:22.715 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>EXECUTE</operation><runat>DAY</runat><loglevel>verbose</loglevel><inputfilepath>XAT_Module.i.xml</inputfilepath><outputfilepath>XAT_Module.o.xml</outputfilepath><runtime>CICS</runtime><callinterface>CICSLINK</callinterface><applid>HCCAC013</applid><db2plan>GENAONE</db2plan><db2id>DBCC</db2id><rollback>false</rollback><jobdirectory>2f320fdbe76d4aca8e5befdb1a2449ca</jobdirectory><amode24>false</amode24><members><membername>LGICUS01</membername></members><loads><mainload>GENAPP.ISPW.PROD.LOAD</mainload></loads><codepage>1047</codepage><lang>COBOL</lang></xatz_request></XATZREQ>
+19:40:22.997 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0</resultcode><resultmessage></resultmessage><jobid>J0813346</jobid><jobname>SNCBAW0C</jobname><starttime>20191210193806412</starttime></xatz_response></XATZRESP>
+19:40:23.001 LOG       HCIClient        Response received from Host. Message: JobId:J0813346
+19:40:23.001 INFO      HCIClient        Job has been started at host with JobId:J0813346
+19:40:23.002 INFO      CWCC CICS        Waiting for Execution Result from Host
+19:40:23.006 VERBOSE   CWCC CICS        Looking for notify file in 3000 ms...
+19:40:26.361 VERBOSE   CWCC CICS        Notify file available, now downloading...
+19:40:26.362 VERBOSE   CWCC CICS        Notify file content retrieved from Notify file. Content:<?xml version="1.0" encoding="UTF-8"?><XATZNOTF><xatz_notification><event>COMPLETED</event><programexit>+0</programexit><xarc>+0</xarc><message></message></xatz_notification></XATZNOTF>
+19:40:26.366 LOG       CWCC CICS        Retrieving job information host for job:J0813346
+19:40:26.371 VERBOSE   HCIClient        Creating HciHostServices instance with Default Codepage :1047
+19:40:26.371 VERBOSE   HCIClient        Connecting outside workbench to HCI
+19:40:26.372 VERBOSE   HCIClient        Data is written in EBCDIC encoding to the host
+19:40:26.372 VERBOSE   HCIClient        Sending request to HCI
+19:40:26.373 LOG       HCIClient        Request to host: <?xml version="1.0" encoding="UTF-8"?><XATZREQ><xatz_request><userid>SNCBAW0</userid><xpassword>XXX</xpassword><operation>JOBINFO</operation><runat>DAY</runat><jobid>J0813346</jobid></xatz_request></XATZREQ>
+19:40:26.717 LOG       HCIClient        Response from host: <?xml version="1.0" encoding="UTF-8"?><XATZRESP xmlns:xsi="http://www.w3.ORG/2001/XMLSCHEMA-INSTANCE"><xatz_response><resultcode>0000</resultcode><resultmessage>Job information successfully returned</resultmessage><jobid /><responsedata><job><name>SNCBAW0C</name><status>OUTPUT</status><returncode>CC=0000    </returncode><steps><step><id>J0813346</id><name>JES2    </name><procstep>        </procstep><ddname>JESMSGLG</ddname><linect>   30</linect><lrecl>  133</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000002.JESMSGLG </dsname></step><step><id>J0813346</id><name>JES2    </name><procstep>        </procstep><ddname>JESJCL  </ddname><linect>  183</linect><lrecl>  136</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000003.JESJCL   </dsname></step><step><id>J0813346</id><name>JES2    </name><procstep>        </procstep><ddname>JESYSMSG</ddname><linect>  181</linect><lrecl>  137</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000004.JESYSMSG </dsname></step><step><id>J0813346</id><name>COPYLOAD</name><procstep>        </procstep><ddname>SYSPRINT</ddname><linect>   13</linect><lrecl>  121</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000110.?        </dsname></step><step><id>J0813346</id><name>EXCIEXEC</name><procstep>        </procstep><ddname>TTOUT   </ddname><linect>   34</linect><lrecl>  121</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000114.?        </dsname></step><step><id>J0813346</id><name>COPYLOG </name><procstep>        </procstep><ddname>STDOUT  </ddname><linect>   28</linect><lrecl>16383</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000115.?        </dsname></step><step><id>J0813346</id><name>COPYLOG </name><procstep>        </procstep><ddname>STDERR  </ddname><linect>    1</linect><lrecl>16383</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000116.?        </dsname></step><step><id>J0813346</id><name>CICSLOG </name><procstep>        </procstep><ddname>XASYSUT </ddname><linect>   49</linect><lrecl>  132</lrecl><dsname>SNCBAW0.SNCBAW0C.J0813346.D0000123.?        </dsname></step></steps></job></responsedata></xatz_response></XATZRESP>
+19:40:26.722 LOG       HCIClient        Response received from Host. Message:Job information successfully returned JobId:
+19:40:26.723 VERBOSE   JobAccessor      Jobinfo received from Host in responsedata
+19:40:26.742 VERBOSE   JobAccessor      JobInfo Content parsed. Number of steps:8
+19:40:26.743 LOG       CWCC CICS        Job information:
 <job>
   <name>SNCBAW0C</name>
   <status>OUTPUT</status>
   <returncode>CC=0000</returncode>
   <steps>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>JES2</name>
       <procstep />
       <ddname>JESMSGLG</ddname>
       <linect>30</linect>
       <lrecl>133</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000002.JESMSGLG</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000002.JESMSGLG</dsname>
     </step>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>JES2</name>
       <procstep />
       <ddname>JESJCL</ddname>
       <linect>183</linect>
       <lrecl>136</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000003.JESJCL</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000003.JESJCL</dsname>
     </step>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>JES2</name>
       <procstep />
       <ddname>JESYSMSG</ddname>
       <linect>181</linect>
       <lrecl>137</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000004.JESYSMSG</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000004.JESYSMSG</dsname>
     </step>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>COPYLOAD</name>
       <procstep />
       <ddname>SYSPRINT</ddname>
       <linect>13</linect>
       <lrecl>121</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000110.?</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000110.?</dsname>
     </step>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>EXCIEXEC</name>
       <procstep />
       <ddname>TTOUT</ddname>
       <linect>34</linect>
       <lrecl>121</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000114.?</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000114.?</dsname>
     </step>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>COPYLOG</name>
       <procstep />
       <ddname>STDOUT</ddname>
       <linect>28</linect>
       <lrecl>16383</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000115.?</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000115.?</dsname>
     </step>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>COPYLOG</name>
       <procstep />
       <ddname>STDERR</ddname>
       <linect>1</linect>
       <lrecl>16383</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000116.?</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000116.?</dsname>
     </step>
     <step>
-      <id>J0811428</id>
+      <id>J0813346</id>
       <name>CICSLOG</name>
       <procstep />
       <ddname>XASYSUT</ddname>
       <linect>49</linect>
       <lrecl>132</lrecl>
-      <dsname>SNCBAW0.SNCBAW0C.J0811428.D0000123.?</dsname>
+      <dsname>SNCBAW0.SNCBAW0C.J0813346.D0000123.?</dsname>
     </step>
   </steps>
 </job>
-15:49:09.094 INFO      CWCC CICS        Component completed with program exit: +0
-15:49:09.095 VERBOSE   CWCC CICS        Retrieving Module output from Host
-15:49:09.301 VERBOSE   CWCC CICS        Module output downloaded from Host
-15:49:09.304 LOG       CWCC CICS        Setting execution variable 'jobid' to J0811428
-15:49:09.306 LOG       CWCC CICS        Setting execution variable 'programexit' to 0
-15:49:09.310 VERBOSE   CWCC CICS        Deleting job directory and all content in /u/xatester/sncbaw0/acd93f454bee482bb329246a74712a82
-15:49:09.451 VERBOSE   CWCC CICS        Completed deleting job directory and all content
-15:49:09.452 VERBOSE   HCIClient        Disconnecting HCI
-15:49:09.638 VERBOSE   CWCC CICS        Converted data:
+19:40:26.743 INFO      CWCC CICS        Component completed with program exit: +0
+19:40:26.743 VERBOSE   CWCC CICS        Retrieving Module output from Host
+19:40:26.923 VERBOSE   CWCC CICS        Module output downloaded from Host
+19:40:26.924 LOG       CWCC CICS        Setting execution variable 'jobid' to J0813346
+19:40:26.924 LOG       CWCC CICS        Setting execution variable 'programexit' to 0
+19:40:26.926 VERBOSE   CWCC CICS        Deleting job directory and all content in /u/xatester/sncbaw0/2f320fdbe76d4aca8e5befdb1a2449ca
+19:40:27.095 VERBOSE   CWCC CICS        Completed deleting job directory and all content
+19:40:27.096 VERBOSE   HCIClient        Disconnecting HCI
+19:40:27.188 VERBOSE   CWCC CICS        Converted data:
 <dfhcommarea>
   <ca-request-id></ca-request-id>
   <ca-return-code>0</ca-return-code>
@@ -254,11 +254,11 @@
     <ca-policy-data></ca-policy-data>
   </ca-customer-request>
 </dfhcommarea>
-15:49:09.638 VERBOSE   CWCC CICS        Finished executing  module: LGICUS01
-15:49:09.641 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
-15:49:10.213 VERBOSE   Component        Result from verify expression: true
-15:49:10.213 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
-15:49:10.214 VERBOSE   Component        Result data mapped with input attributes :
+19:40:27.189 VERBOSE   CWCC CICS        Finished executing  module: LGICUS01
+19:40:27.190 INFO      Component        Verifying program exit code: 0 against verify expression: value < 8
+19:40:28.190 VERBOSE   Component        Result from verify expression: true
+19:40:28.190 INFO      Component        Program exit code was verified to be accepted by the expression: value < 8
+19:40:28.191 VERBOSE   Component        Result data mapped with input attributes :
 <dfhcommarea>
   <ca-request-id></ca-request-id>
   <ca-return-code>0</ca-return-code>
@@ -287,6 +287,6 @@
     <ca-policy-data></ca-policy-data>
   </ca-customer-request>
 </dfhcommarea>
-15:49:10.214 INFO      Component        Finished interpreting Component: LGICUS01 program:LGICUS01
-15:49:10.214 INFO      IterateData      IterateData completed
-15:49:10.214 COMMENT   Engine           Test Scenario execution ended
+19:40:28.191 INFO      Component        Finished interpreting Component: LGICUS01 program:LGICUS01
+19:40:28.192 INFO      IterateData      IterateData completed
+19:40:28.192 COMMENT   Engine           Test Scenario execution ended
